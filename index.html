@@ -9,36 +9,44 @@
     <body>
         <header>
             <nav class="nav">
-                <button id="highscores">LinkToHighScores</button>
+                <button id="highscores">HighScores</button>
                 <div class="timer">
                 <p>Time:</p>
-                <p id="countdown">60</p>
+                <p id="countdown">180</p>
                 </div>
             </nav>
         </header>
+
         <main>
-            <button id="start">Start</button>
-            <h1 id="question"></h1>                
+                <h1 id="question"></h1>
+                <div id="startstyles">
+                    <button id="start">Start</button>
+                </div>              
                 <div class="answercontainer">
-                    <button class='button' id="button1"></button>
-                    <button class='button' id="button2"></button>
-                    <button class='button' id="button3"></button>
-                    <button class='button' id="button4"></button>
+                    <button id="button1"></button>
+                    <button id="button2"></button>
+                    <button id="button3"></button>
+                    <button id="button4"></button>
+                </div>
+                <h1 id="result"></h1>
+        </main>
+
+        <footer>
+            <div class="endscreen" >
+                <div class="results">
+                <h3>Game Over! Your score was:</h3>
+                <h3 id="finalscore"></h3>
+                </div>
+                <h3>Enter your initials to save your score.</h3>
+                <h3>Refresh the page to try again.</h3>
+                <form id="scoreform">
+                    <input type="text" id="input" placeholder="initials">
+                    <button id="initials">Save</button>
+                </form>
+                <div class="scores">
+                    <ul class="scorelist"></ul>
                 </div>
             </div>
-        </main>
-        <div class="endscreen" >
-            <h3>Game Over!</h3>
-            <form id="scoreform">
-                <input type="text" id="input" placeholder="initials">
-                <button id="initials">Click</button>
-            </form>
-        </div>
-        <div class="scores">
-            <ul class="scorelist"></ul>
-        </div>
-        <footer>
-            <h1 id="result"></h1>
         </footer>
         <script src="./assets/javascript/scripts.js"></script>
     </body>

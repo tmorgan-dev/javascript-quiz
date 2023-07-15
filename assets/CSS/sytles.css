@@ -9,9 +9,16 @@ html {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+
 nav {
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
     padding: 1rem;
 }
 
@@ -27,14 +34,42 @@ nav {
     padding: 2rem;
 }
 
+.scores {
+    display: flex;
+    
+}
+
+.endscreen {
+    display: flex;
+    flex-direction: column;
+}
+
+.results {
+    display: flex;
+    flex-direction: row;
+}
+
+#startstyles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
 #question {
     font-size: 50px;
     font-family: var(--primary-font);
     padding: 1rem;
 }
 
-footer {
+
+#result {
     display: flex;
     justify-content: center;
     padding: 1rem;
+}
+
+#input {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
