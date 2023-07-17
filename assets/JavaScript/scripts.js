@@ -1,24 +1,24 @@
 //Array containing questions, answers and correct answer
 var questionArray = [
     {
-        question: "question1",
-        answerOptions: ["Answer1", "Answer2", "Answer3", "Answer4"],
-        answer: "Answer1",
+        question: "Where is the ideal location to link a scripts.js file in your index.html?",
+        answerOptions: ["In the meta data", "Below the Footer", "It does not matter", "In the header"],
+        answer: "Below the Footer",
     },
     {
-        question: "question2",
-        answerOptions: ["Answer1", "Answer2", "Answer3", "Answer4"],
-        answer: "Answer1",
+        question: "What is the correct case style to use when declaring a variable in JavaScript?",
+        answerOptions: ["Snake Case", "Kebab Case", "Pascal Case", "Camel Case"],
+        answer: "Camel Case",
     },
     {
-        question: "question3",
-        answerOptions: ["Answer1", "Answer2", "Answer3", "Answer4"],
-        answer: "Answer1",
+        question: "To run a function on a declared variable, enter the variable name...",
+        answerOptions: ["In parentheses", "In the curly brackets", "In the square brackets", "In quotations"],
+        answer: "In parentheses",
     },
     {
-        question: "question4",
-        answerOptions: ["Answer1", "Answer2", "Answer3", "Answer4"],
-        answer: "Answer1",
+        question: "JavaScript can be used to edit the content of...",
+        answerOptions: ["The HTML", "The CSS", "Both", "Neither"],
+        answer: "Both",
     },
 ]
 
@@ -46,7 +46,7 @@ var answerContainer = document.querySelector('.answercontainer')
 
 //function to create the landing page which starts the quiz
 function init() {
-    questionText.textContent = "Welcome to the JavaScript Quiz!"
+    questionText.textContent = "Welcome to the JavaScript Quiz! Click Start to begin the quiz. You will have three minutes to answer four questions. Incorrect answers will deduct five seconds from you score. Log your initials and high score at the end!"
     scores.style.display = 'none'
     scoreList.style.display = 'none'
     endScreen.style.display = 'none'
@@ -95,7 +95,7 @@ answerContainer.addEventListener("click", function (event) {
     }
 })
 
-//Function to check if answer if correct or incorrect 
+//Function to check if answer if correct or incorrect and call another question or end game
 function checkAnswer(userAnswer) {
     var correctAnswer = questionArray[currentIndex].answer
     if (userAnswer === correctAnswer) {
@@ -147,7 +147,6 @@ function renderScores() {
     }
     scores.style.display = 'flex'
     scoreList.style.display = 'flex'
-    // console.log(savedScores)
 }
 
 //Event listeners for starting the game, displaying the scores and rendering the scores
